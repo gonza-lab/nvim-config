@@ -32,6 +32,11 @@ let mapleader=" "
 let NERDTreeQuitOnOpen=1
 let g:indentLine_char = '▏'
 
+" UtilSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <silent> <leader>n :nohlsearch<CR>
