@@ -22,6 +22,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdcommenter'
 Plug 'yggdroot/indentline'
+Plug 'SirVer/ultisnips'
 
 call plug#end()
 
