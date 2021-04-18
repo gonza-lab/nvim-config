@@ -18,6 +18,8 @@ Plug 'morhetz/gruvbox'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'mhinz/vim-signify'
 
 call plug#end()
 
@@ -28,3 +30,4 @@ let NERDTreeQuitOnOpen=1
 
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
+nmap <silent> <leader>n :nohlsearch<CR>
