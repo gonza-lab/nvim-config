@@ -9,3 +9,13 @@ endsnippet
 snippet clg "Console log"
 console.log(${1:});
 endsnippet
+
+snippet cler "Controller"
+const ${1:name} = async (req = request, res = response, next) => {
+  try {
+    ${2:}
+  } catch(error) {
+    next(error);
+  }
+}
+endsnippet
