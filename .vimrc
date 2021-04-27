@@ -8,7 +8,6 @@ set encoding=utf-8
 set showmatch
 set sw=2
 set relativenumber
-
 call plug#begin('~/.vim/plugged')
 
 " Themes
@@ -23,14 +22,18 @@ Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdcommenter'
 Plug 'yggdroot/indentline'
 Plug 'SirVer/ultisnips'
+Plug 'alvan/vim-closetag'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 call plug#end()
 
-colorscheme gruvbox
-
 let mapleader=" "
-let NERDTreeQuitOnOpen=1
 let g:indentLine_char = '▏'
+
+" NERDTree
+let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
 
 " UtilSnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -40,8 +43,24 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " Signify
 set updatetime=100
 
+" vim-closetag
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+
+" Theme
+colorscheme gruvbox
+
+
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <silent> <leader>n :nohlsearch<CR>
+nmap <Leader>y "+y
+
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 filetype plugin on
