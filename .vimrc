@@ -1,41 +1,18 @@
-set hidden
-set cmdheight=2
-set updatetime=300
 set number
 set mouse=a
 set numberwidth=1
 set clipboard=unnamed
-syntax enable
+syntax on
 set showcmd
+set ruler
+"set cursorline
 set encoding=utf-8
 set showmatch
 set sw=2
 set relativenumber
-
-call plug#begin('~/.vim/plugged')
-
-" Themes
-Plug 'morhetz/gruvbox'
-
-" IDE
-Plug 'scrooloose/nerdtree'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'mhinz/vim-signify'
-Plug 'scrooloose/nerdcommenter'
-Plug 'yggdroot/indentline'
-Plug 'SirVer/ultisnips'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Syntax
-Plug 'pangloss/vim-javascript'
-Plug 'elzr/vim-json'
-Plug 'MaxMEllon/vim-jsx-pretty'
-
-" Typing
-Plug 'jiangmiao/auto-pairs'
-
-call plug#end()
+so ~/.vim/plugins.vim
+"so ~/.vim/plugin-config.vim
+"so ~/.vim/maps.vim
 
 let mapleader=" "
 let g:indentLine_char = '▏'
@@ -68,7 +45,7 @@ set updatetime=100
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 
 " Theme
-colorscheme gruvbox
+ colorscheme gruvbox
 
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <silent> <leader>n :nohlsearch<CR>
